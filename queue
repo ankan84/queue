@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void delete(int *arr,int*font){
+int p;
+if(*font==-1)
+	printf("queue is empty\n");
+else
+{
+	
+p=arr[*font];
+*font=*font+1;
+printf(" the deleted element is %d  \n",p );
+
+}
+
+}
+void insert(int arr[],int*rear,int*font,int size,int item){
+
+if(*rear==size-1)
+	printf("queue is full\n");
+else
+{
+	*font=0;
+
+*rear=*rear+1;
+arr[*rear]=item;
+
+}
+}
+
+int main(){
+int arr[5];
+int rear=-1;
+int font=-1;
+int size=5;
+
+
+insert(arr,&rear,&font,size,23);
+insert(arr,&rear,&font,size,24);
+insert(arr,&rear,&font,size,25);
+insert(arr,&rear,&font,size,26);
+insert(arr,&rear,&font,size,27);
+
+delete(arr,&font);
+delete(arr,&font);
+delete(arr,&font);
+
+
+}
