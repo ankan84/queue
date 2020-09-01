@@ -4,10 +4,10 @@
 void delete(int *arr,int*font){
 int p;
 if(*font==-1)
-	printf("queue is empty\n");
+  printf("queue is empty\n");
 else
 {
-	
+  
 p=arr[*font];
 *font=*font+1;
 printf(" the deleted element is %d  \n",p );
@@ -15,13 +15,21 @@ printf(" the deleted element is %d  \n",p );
 }
 
 }
+void show(int arr[],int* rear,int *font){
+
+for (int i =*font; i <=*rear; i++)
+{
+  printf("%d\n",arr[i] );
+}
+
+}
 void insert(int arr[],int*rear,int*font,int size,int item){
 
 if(*rear==size-1)
-	printf("queue is full\n");
+  printf("queue is full\n");
 else
 {
-	*font=0;
+  *font=0;
 
 *rear=*rear+1;
 arr[*rear]=item;
@@ -41,10 +49,12 @@ insert(arr,&rear,&font,size,24);
 insert(arr,&rear,&font,size,25);
 insert(arr,&rear,&font,size,26);
 insert(arr,&rear,&font,size,27);
+ show(arr,&rear,&font);
 
 delete(arr,&font);
-delete(arr,&font);
-delete(arr,&font);
+//delete(arr,&font);
+//delete(arr,&font);
+show(arr,&rear,&font);
 
 
 }
